@@ -1,16 +1,26 @@
 package employee.service;
 
-import employee.controllers.EmployeeController;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("employee")
-public class EmployeeService {
+import employee.Employee;
 
-    public final EmployeeController
+import java.util.Collection;
+import java.util.List;
+
+public interface EmployeeService {
+    List<Employee>getAllEmployees();
 
 
+    Integer getSalarySum();
 
+    Employee getSalaryMin();
+
+    Employee getSalaryMax();
+
+    Collection<Employee> getSalaryAboveAverageEmployees();
 }
+
+
+
+
+
+
