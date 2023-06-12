@@ -12,9 +12,9 @@ public interface EmployeeService {
 
     Integer getSalarySum();
 
-    Employee getSalaryMin();
+    double getSalaryMin();
 
-    Employee getSalaryMax();
+    int getSalaryMax();
 
     Collection<Employee> getSalaryAboveAverageEmployees();
 }

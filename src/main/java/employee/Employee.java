@@ -17,4 +17,6 @@ public class Employee {
         return salary;
     }
 
+    public boolean getSalarySum() {
+
 }

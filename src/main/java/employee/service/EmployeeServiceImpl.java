@@ -11,6 +11,7 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
+    private Employee[] employees;
 
     public EmployeeServiceImpl(EmployeeRepository employeeRepository){
         this.employeeRepository=employeeRepository;
@@ -23,21 +24,35 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Integer getSalarySum() {
-        return null;
+
     }
 
     @Override
-    public Employee getSalaryMin() {
-        return null;
+    public double getSalaryMin() {
+        double sum = employees.get(0).getSalarySum();
+        for (Employee employee : employees) {
+            if (employee.getSalarySum() < sum) {
+                sum = employee.getSalarySum();
+            }
+        }return sum;
+
     }
 
+
     @Override
-    public Employee getSalaryMax() {
-        return null;
+    public int getSalaryMax() {
+        int length = 0;
+        for (Employee employee : employees) {
+            if (length < employee.getSalary(0).length()) {
+                length = employee.getSalarySum().length();
+            }
+        }return length;
+
     }
+
 
     @Override
     public Collection<Employee> getSalaryAboveAverageEmployees() {
-        return null;
+        return getSalaryAboveAverageEmployees();
     }
 }
